@@ -16,6 +16,9 @@ REM Ativa o ambiente virtual
 echo Ativando ambiente virtual...
 call venv\Scripts\activate
 
+REM Atualiza o pip para a versão mais recente
+python.exe -m pip install --upgrade pip
+
 REM Instala as dependências do requirements.txt
 echo Instalando dependências do requirements.txt...
 pip install -r requirements.txt

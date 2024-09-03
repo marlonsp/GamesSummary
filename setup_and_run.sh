@@ -4,7 +4,7 @@
 CSV_FILE="data/games_data.csv"
 
 # Caminho do script Python FastAPI
-PYTHON_SCRIPT="src/main.py"
+PYTHON_SCRIPT="app.py"
 
 # Verifica se o ambiente virtual já existe
 if [ ! -d "venv" ]; then
@@ -16,6 +16,9 @@ fi
 echo "Ativando ambiente virtual..."
 source venv/bin/activate
 
+# Atualiza o pip para a versão mais recente
+python3 -m pip install --upgrade pip
+
 # Instala as dependências do requirements.txt
 echo "Instalando dependências do requirements.txt..."
 pip install -r requirements.txt
@@ -26,7 +29,7 @@ if [ -f "$CSV_FILE" ]; then
     
     # Executa o script Python com FastAPI
     echo "Executando o script Python $PYTHON_SCRIPT..."
-    uvicorn $PYTHON_SCRIPT:app --reload
+    python3 "$PYTHON_SCRIPT"
 else
     echo "Arquivo CSV não encontrado: $CSV_FILE"
     echo "Por favor, verifique se o arquivo CSV está no diretório correto."
