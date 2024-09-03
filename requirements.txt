@@ -1,0 +1,9 @@
+requests
+beautifulsoup4
+pandas
+nltk
+selenium
+scikit-learn
+fastapi
+uvicorn
+chromedriver-autoinstaller
