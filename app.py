@@ -10,7 +10,7 @@ nltk.download('stopwords')
 stop_words_pt = stopwords.words('portuguese')
 
 # Carregar o CSV com os jogos
-csv_file = "../data/games_data.csv"
+csv_file = "data/games_data.csv"
 df_raw = pd.read_csv(csv_file)
 df = df_raw.dropna()
 
@@ -26,4 +26,5 @@ async def get_recommendations(text: str = Query(..., min_length=1)):
         return {"message": str(e)}
 
 if __name__ == '__main__':
+    print("Running the API")
     uvicorn.run(app, host='0.0.0.0', port=9191)
