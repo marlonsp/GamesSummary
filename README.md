@@ -89,9 +89,9 @@ A estrutura de retorno da API possui os seguintes campos:
 
 ## Casos de Testes:
 
-1. Resposta com 10 resultados: http://localhost:9191/query/?text=rpg<br>
+1. Resposta com 10 resultados: http://10.103.0.28:9191/query/?text=rpg<br>
 Essa pesquisa retorna 10 resultados por causa do estilo "RPG" ser um tema comum no mundo dos jogos
-2. Resposta com menos de 10 resultados: http://localhost:9191/query/?text=educational<br>
+2. Resposta com menos de 10 resultados: http://10.103.0.28:9191/query/?text=educational<br>
 Essa pesquisa retorna menos de 10 resultados por causa do tema "educational" não ter tanto destaque entre os jogos mais conhecidos.
-3. Resposta não óbvia: http://localhost:9191/query/?text=brazil<br>
+3. Resposta não óbvia: http://10.103.0.28:9191/query/?text=brazil<br>
 Esta pesquisa retorna jogos relacionados ao termo "Brazil", sendo quase todos jogos de futebol que fazem referência direta ao país. No entanto, também retorna o jogo "Sherlock Holmes: The Silver Earring", que, embora não seja um jogo de futebol, menciona o Brasil em seu enredo, pois o jogo leva os jogadores a várias localizações, incluindo o Brasil, como parte da aventura do detetive Sherlock Holmes.
